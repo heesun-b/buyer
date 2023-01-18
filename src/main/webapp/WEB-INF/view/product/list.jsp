@@ -13,6 +13,7 @@
                 <th>등록일</th>
             </tr>
 
+
             <tr>
                 <td>1</td>
                 <td><a href="/product/1">바나나</a></td>
