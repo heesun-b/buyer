@@ -17,9 +17,11 @@ public interface UserRepository { // crud부터 만들기
 
     public User findById(int id);
 
-    public int updateById(int id, String password);
+    public int updateById(@Param("id") int id, @Param("password") String password);
 
     public int deleteById(int id);
+
+    public User findByUsernameAndPassword(@Param("username") String username, @Param("password") String password);
 
     // public User login(String username, String password);
 
