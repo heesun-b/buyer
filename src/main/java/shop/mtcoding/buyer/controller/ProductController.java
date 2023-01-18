@@ -41,7 +41,7 @@ public class ProductController {
         if (result == 1) {
             return "redirect:/";
         } else {
-            return "redirect:/product/" + id + "/buyForm";
+            return "redirect:/product/" + id;
 
         }
     }

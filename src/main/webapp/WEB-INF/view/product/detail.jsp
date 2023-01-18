@@ -22,8 +22,18 @@
             </tr>
         </table>
 
-        <form action="/product/${product.id}/buy" method="post">
-            <input type="number" name="qty" min="0" max="${product.qty}">
-            <button type="submit">구매</button>
-        </form>
+        <c:choose>
+            <c:when test="${principle != null}">
+                <form action="/product/${product.id}/buy" method="post">
+                    <input type="number" name="qty" min="0" max="${product.qty}">
+                    <button type="submit">구매</button>
+                </form>
+            </c:when>
+
+            <c:otherwise>
+                <h3><a href="/loginForm"> 로그인 필요</a></h3>
+            </c:otherwise>
+        </c:choose>
+
+
         <%@ include file="../layout/footer.jsp" %>
