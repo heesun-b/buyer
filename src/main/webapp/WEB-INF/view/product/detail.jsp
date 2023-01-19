@@ -31,9 +31,7 @@
             </c:when>
 
             <c:otherwise>
-                <h3><a href="/loginForm"> 로그인 필요</a></h3>
+                <h4><a href="/loginForm"> 로그인 필요</a></h4>
             </c:otherwise>
         </c:choose>
-
-
         <%@ include file="../layout/footer.jsp" %>
