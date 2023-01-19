@@ -18,7 +18,7 @@
                     <td><a href="/product/${productList.id}">${productList.name}</a></td>
                     <td>${productList.price}원</td>
                     <td>${productList.qty}개</td>
-                    <td>${productList.createdAt}</td>
+                    <td>${productList.createdAtToString}</td>
                 </tr>
             </c:forEach>
 
