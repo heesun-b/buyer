@@ -22,16 +22,16 @@
             </tr>
         </table>
 
-        <c:choose>
-            <c:when test="${principle != null}">
-                <form action="/product/${product.id}/buy" method="post">
-                    <input type="number" name="qty" min="0" max="${product.qty}">
-                    <button type="submit">구매</button>
-                </form>
-            </c:when>
 
-            <c:otherwise>
-                <h4><a href="/loginForm"> 로그인 필요</a></h4>
-            </c:otherwise>
-        </c:choose>
+        <c:if test="${principal != null}">
+            <form action="/purchase/insert" method="post">
+                <input type="hidden" name="productId" value="${product.id}">
+                <select name="count">
+                    <c:forEach begin="1" end="${product.qty}" var="num">
+                        <option value="${num}">${num}</option>
+                    </c:forEach>
+                </select>
+                <button type="submit">구매하기</button>
+            </form>
+        </c:if>
         <%@ include file="../layout/footer.jsp" %>
